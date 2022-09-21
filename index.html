@@ -6,12 +6,13 @@
         <link rel = "stylesheet" href = "styles.css">
     </head>
     <body>
+        <script src = "index.js"></script>
         <div class="header">
             <h1>Pokedex</h1>
         </div>
         <div class = "searchBar">
         <form>
-            <input type = "number" id="searchByNumber" name="searchByNumber" placeholder="Search by Number">
+            <input type = "number" id="searchByNumber" name="searchByNumber" placeholder="Search by Number" min = "1" max = "20" onkeypress= "return isNumberKey(evt)">
             <button type="button2">
                 Search
             </button>
@@ -19,7 +20,7 @@
         </div>
         <div class="searchBar">
         <form>
-            <input type="text" id="searchByName" name="searchByName" placeholder="Search by Name">
+            <input type="text" id="searchByName" name="searchByName" placeholder="Search by Name" maxlength="20" onkeypress="return allLetter(event)">
             <button type="button1">
                 Search
             </button>
