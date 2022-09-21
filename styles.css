@@ -42,3 +42,9 @@ figcaption{
   text-align: center;
   font-style: italic;
 }
+
+.searchBar {
+  display: inline-block;
+  padding-right: 30px;
+  padding-bottom: 30px;
+}
