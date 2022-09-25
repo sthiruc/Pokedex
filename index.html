@@ -6,15 +6,15 @@
         <meta name="description" content="Pokedex">
         <meta name="author" content="Sriraam Thiruchlevam">
         <link rel = "stylesheet" href = "styles.css">
+        <script src = "index.js"></script>
     </head>
     <body>
-        <script src = "index.js"></script>
         <div class="header">
             <h1>Pokedex</h1>
         </div>
         <div class = "searchBar">
         <form>
-            <input type = "number" id="searchByNumber" name="searchByNumber" placeholder="Search by Number" min = "1" max = "20" onkeypress= "return isNumberKey(evt)">
+            <input list = "listName" type = "number" id="searchByNumber" name="searchByNumber" placeholder="Search by Number" min = "1" max = "20" onkeypress= "return isNumberKey(evt)">
             <button type="button2" onclick="showAlert()">
                 Search
             </button>
@@ -22,10 +22,34 @@
         </div>
         <div class="searchBar">
         <form>
-            <input type="text" id="searchByName" name="searchByName" placeholder="Search by Name" maxlength="20" onkeypress="return allLetter(event)">
+            <input list = "listName" type="text" id="searchByName" name="searchByName" placeholder="Search by Name" maxlength="20" onkeypress="return allLetter(event)">
             <button type="button1" onclick="showAlert2()">
                 Search
             </button>
+            <datalist id = "listName">
+                <datalist id = "searchByName">
+                    <option value = "Bulbasaur">001</option>
+                    <option value = "Ivysaur">002</option>
+                    <option value = "Venusaur">003</option>
+                    <option value = "Charmander">004</option>
+                    <option value = "Charmeleon">005</option>
+                    <option value = "Charizard">006</option>
+                    <option value = "Squirtle">007</option>
+                    <option value = "Wartortle">008</option>
+                    <option value = "Blastoise">009</option>
+                    <option value = "Caterpie">010</option>
+                    <option value = "Metapod">011</option>
+                    <option value = "Butterfree">012</option>
+                    <option value = "Weedle">013</option>
+                    <option value = "Kakuna">014</option>
+                    <option value = "Beedrill">015</option>
+                    <option value = "Pidgey">016</option>
+                    <option value = "Pidgeotto">017</option>
+                    <option value = "Pidgeot">018</option>
+                    <option value = "Rattata">019</option>
+                    <option value = "Raticate">020</option>
+                </datalist>
+            </datalist>
         </form>
         </div>
         
@@ -140,7 +164,7 @@
                 <figure>
                     <img src = "pokemon/16.png" alt = "Pidgey">
                     <figcaption>
-                        Charmander #016<br>Type: Normal, Flying<br>
+                        Pidgey #016<br>Type: Normal, Flying<br>
                     </figcaption>
                 </figure>
 
