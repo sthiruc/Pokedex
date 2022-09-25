@@ -3,6 +3,8 @@
     <head>
         <meta charset = "utf-8">
         <title>SE 3316 Lab 1</title>
+        <meta name="description" content="Pokedex">
+        <meta name="author" content="Sriraam Thiruchlevam">
         <link rel = "stylesheet" href = "styles.css">
     </head>
     <body>
@@ -13,7 +15,7 @@
         <div class = "searchBar">
         <form>
             <input type = "number" id="searchByNumber" name="searchByNumber" placeholder="Search by Number" min = "1" max = "20" onkeypress= "return isNumberKey(evt)">
-            <button type="button2">
+            <button type="button2" onclick="showAlert()">
                 Search
             </button>
         </form>
@@ -21,7 +23,7 @@
         <div class="searchBar">
         <form>
             <input type="text" id="searchByName" name="searchByName" placeholder="Search by Name" maxlength="20" onkeypress="return allLetter(event)">
-            <button type="button1">
+            <button type="button1" onclick="showAlert2()">
                 Search
             </button>
         </form>
