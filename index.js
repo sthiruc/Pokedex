@@ -1240,18 +1240,18 @@ function showAlert(){
     let x = document.getElementById('searchByNumber').value;
     alert("Name: " + myData[x-1].Name + "\n" + "Number: " + myData[x-1].Number + 
     "\n" + "Base Attack: " + myData[x-1]["Base ATK"] + "\n" + "Base Defence: " + myData[x-1]["Base DEF"]);
-
+    
 }
 
 function showAlert2(){
     let y = document.getElementById('searchByName').value;
-    //y.toLowercase();
     for (let i = 0; i < myData.length; i++){
-        if(myData[i].Name.toLowerCase() === y.toLowerCase()){
+        if(myData[i].Name.toLowerCase() === y.toLowerCase() || myData[i].Name.toLowerCase().includes(document.getElementById('searchByName').value)){
             alert("Name: " + myData[i].Name + "\n" + "Number: " + myData[i].Number + 
             "\n" + "Base Attack: " + myData[i]["Base ATK"] + "\n" + "Base Defence: " + myData[i]["Base DEF"]);
         }        
     }
+    
 }
 
 
