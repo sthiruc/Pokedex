@@ -1253,5 +1253,31 @@ function showAlert2(){
     }
     
 }
+document.getElementById('searchByName').addEventListener("input",typeFilter);
+function typeFilter(){
+  let y = document.getElementById('searchByName').value
+  const newList = document.createElement('li');
+  const newOList = document.createElement('ul');
+  document.getElementById("filterList").appendChild(newList);
+  newList.appendChild(newOList);
+  const d  = document.getElementById("filterList")
+  for (let i = 0; i < myData.length; i++){
+    if(myData[i].Name.toLowerCase() === y.toLowerCase() || myData[i].Name.toLowerCase().includes(document.getElementById('searchByName').value)){
+      const figure = document.createElement('figure');
+      const figCpt = document.createElement('figcaption');
+      const img = document.createElement('img');
+      img.src = "pokemon/" + myData[i].Number + ".png";
+      const w = document.createTextNode("Name: " + myData[i].Name + "\n" +"#" + myData[i].Number);
+      newOList.appendChild(figure);
+      figCpt.appendChild(w);
+      figure.appendChild(img);
+      figure.appendChild(figCpt);
+      
+      }
+    
+    }
+         
+}
+  
 
 

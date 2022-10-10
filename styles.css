@@ -48,3 +48,12 @@ figcaption{
   padding-right: 30px;
   padding-bottom: 30px;
 }
+.filterList{
+  background-color: greenyellow;
+}
+li{
+  list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
