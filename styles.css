@@ -12,7 +12,7 @@ img {
     border-radius: 25px;
     padding: 30px;
     border-style: solid;
-    border-color: 5px black;
+    border-color: black;
     
   }
 figure{
@@ -51,9 +51,4 @@ figcaption{
 .filterList{
   background-color: greenyellow;
 }
-li{
-  list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
+

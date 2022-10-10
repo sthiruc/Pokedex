@@ -1262,15 +1262,20 @@ function typeFilter(){
   let y = document.getElementById('searchByName').value;
   const newList = document.createElement('li');
   const newOList = document.createElement('ul');
+  newList.style.listStyleType = "none";
+  newList.style.margin = "0";
+  newList.style.padding = "0";
+  newList.style.textAlign = "center";
   document.getElementById("filterList").appendChild(newList);
   newList.appendChild(newOList);
   for (let i = 0; i < myData.length; i++){
-    if(myData[i].Name.toLowerCase() === y.toLowerCase() || myData[i].Name.toLowerCase().includes(document.getElementById('searchByName').value)){
+    if((myData[i].Name.toLowerCase() === y.toLowerCase() || myData[i].Name.toLowerCase().includes(document.getElementById('searchByName').value)) && y.length >= 1){
       const figure = document.createElement('figure');
+      figure.style.marginTop = "20px";
       const figCpt = document.createElement('figcaption');
       const img = document.createElement('img');
       img.src = "pokemon/" + myData[i].Number + ".png";
-      const w = document.createTextNode("Name: " + myData[i].Name + "\n" +"#" + myData[i].Number);
+      const w = document.createTextNode("Name: " + myData[i].Name + "\n" +"#" + myData[i].Number + "\n" + "Type: " + myData[i]["Type 1"] + ", " + myData[i]["Type 2"]);
       newOList.appendChild(figure);
       figCpt.appendChild(w);
       figure.appendChild(img);

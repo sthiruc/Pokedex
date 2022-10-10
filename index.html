@@ -15,7 +15,7 @@
         <div class = "searchBar">
         <form>
             <input list = "listName1" type = "number" id="searchByNumber" name="searchByNumber" placeholder="Search by Number" min = "1" max = "20" onkeypress= "return isNumberKey(evt)">
-            <button type="button2" onclick="showAlert()">
+            <button onclick="showAlert()">
                 Search
             </button>
         </form>
@@ -23,7 +23,7 @@
         <div class="searchBar">
         <form>
             <input list = "listName" type="text" id="searchByName" name="searchByName" placeholder="Search by Name" maxlength="20" onkeypress="return allLetter(event)">
-            <button type="button1" onclick="showAlert2()">
+            <button onclick="showAlert2()">
                 Search
             </button>
             <datalist id = "listName">
@@ -73,9 +73,10 @@
         </form>
         </div>
         
-        <div id = "filterList" class = "filterList">
-            
+        <div id = "filterList" class = "filterList">            
         </div>
+
+        <br>
 
         <ul id = "pokeList">
             <li>
