@@ -1255,12 +1255,15 @@ function showAlert2(){
 }
 document.getElementById('searchByName').addEventListener("input",typeFilter);
 function typeFilter(){
-  let y = document.getElementById('searchByName').value
+  const d  = document.getElementById("filterList");
+  while (d.firstChild) {
+    d.removeChild(d.firstChild);
+  }
+  let y = document.getElementById('searchByName').value;
   const newList = document.createElement('li');
   const newOList = document.createElement('ul');
   document.getElementById("filterList").appendChild(newList);
   newList.appendChild(newOList);
-  const d  = document.getElementById("filterList")
   for (let i = 0; i < myData.length; i++){
     if(myData[i].Name.toLowerCase() === y.toLowerCase() || myData[i].Name.toLowerCase().includes(document.getElementById('searchByName').value)){
       const figure = document.createElement('figure');
